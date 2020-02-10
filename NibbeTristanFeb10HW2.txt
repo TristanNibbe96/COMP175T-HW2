@@ -1,0 +1,11 @@
+﻿Tristan Nibbe
+2/8/2020
+COMP 175 T
+
+
+HW 2
+
+
+0.https://github.com/TristanNibbe96/COMP175T-HW2
+3. When a vector is created a continuous block of memory is allocated by c++ for it and its contents. As new elements are added to the vector the block is gradually filled up. If the vector exceeds the size of the allocated block a new larger block is allocated and the vector is copied over to this new block.
+4. I know that there must be a better, more efficient way to approach the problem, but the only thing I could think of was a brute force approach. Basically my method would be to use two nested loops that would start at the max value a three digit number could have, 999, and check each possible combination until we hit some lower limit, probably around 900. Each product would have to be first checked to see if it is larger than our existing max and then if it is indeed a a palindrome, in which case it would become the new maximum palindrome.
