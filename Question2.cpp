@@ -3,17 +3,18 @@
 
 int main(){
 	std::vector<int> numbers;
-	numbers = initializeNumbers(askForAmountOfNumbers());
+	numbers = askForNumbers(askForAmountOfNumbers());
 	int limit = askForLimit();
 
+	printf("Summing multiples\n");
 	int sum = 0;
 	for(int i = 0; i < numbers.size(); i++){
-		printf("sum: %d\n" , sum);
 		sum += findSumOfMultiples(numbers.at(i),limit);
-		printf("sum: %d\n" , sum);
 
 	}
+	printf("sum: %d\n" , sum);
 
+	printf("Subtracting overlap\n");
 	int overlap = findSumOfMultiples(findCommonFactor(numbers),limit);
 	sum -= overlap;
 
@@ -35,7 +36,7 @@ int askForAmountOfNumbers(){
 	return amount;
 }
 
-std::vector<int> initializeNumbers(int amountOfNumbers){
+std::vector<int> askForNumbers(int amountOfNumbers){
 	std::vector<int> numbersLocal;
 	int tempInt = 0
 	;
